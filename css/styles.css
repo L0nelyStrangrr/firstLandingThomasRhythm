@@ -42,8 +42,7 @@ li {
 }
 
 .parallax {
-    background-attachment: fixed;
-    
+    background: transparent;
 }
 
 @media (max-width: 768px) {
