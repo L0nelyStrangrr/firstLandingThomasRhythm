@@ -23,12 +23,12 @@ $('.testemonials_carousel').slick({
 });
 
 $(document).ready(function() {
-    $('#scroll_down').on("click", function(e) {
+    $('.section_link').on("click", function(e) {
         e.preventDefault();
         var hrefId = $(this).attr('href'),
             top = $(hrefId).offset().top;
 
-        $('body, html').animate({scrollTop: top}, 1500);    
+        $('body, html').animate({scrollTop: top}, 1200);    
     });
 });
     

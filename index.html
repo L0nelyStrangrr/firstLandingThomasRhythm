@@ -13,18 +13,18 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="first_section parallax" data-parallax="scroll" data-image-src="img/background.jpg">
+        <div id="section_home" class="first_section parallax" data-parallax="scroll" data-image-src="img/background.jpg">
                 <header class="header">
                     <div class="logo">
                         <img src="img/logo.png" alt="logo.png">
                     </div>
                     <nav class="nav">
                         <ul>
-                            <li class="nav_item"><a href="#">home</a></li>
-                            <li class="nav_item"><a href="#">about</a></li>
-                            <li class="nav_item"><a href="#">services</a></li>
-                            <li class="nav_item"><a href="#">works</a></li>
-                            <li class="nav_item"><a href="#">contact</a></li>   
+                            <li class="nav_item"><a href="#section_home" class="section_link">home</a></li>
+                            <li class="nav_item"><a href="#section_about" class="section_link">about</a></li>
+                            <li class="nav_item"><a href="#section_services" class="section_link">services</a></li>
+                            <li class="nav_item"><a href="#section_works" class="section_link">works</a></li>
+                            <li class="nav_item"><a href="#section_contact" class="section_link">contact</a></li>   
                         </ul>
                     </nav>
                 </header>
@@ -32,7 +32,7 @@
                     <h1 class="name">thomas rhythm</h1>
                     <div class="slogan">Extraordinary art director & creative minimalism lover</div>
                 </div>
-                <a id="scroll_down" href="#section_about" class="link_down">
+                <a href="#section_about" class="link_down section_link">
                     <i class="fa fa-angle-down link_down-icon floating"></i>
                 </a>
             </div>
@@ -171,7 +171,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section section_bordered">
+            <div id="section_services" class="section section_bordered">
                 <div class="container">
                     <h2 class="text-center">services</h2>
                     <div class="tabs">
@@ -342,7 +342,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section section_portfolio">
+            <div id="section_works" class="section section_portfolio">
                 <div class="container">
                     <h2 class="text-center">portfolio</h2>
                     <div class="portfolio-description text-center">
@@ -708,7 +708,7 @@ In maximus ligula semper metus pellentesque mattis. Maecenas  volutpat, diam eni
                     </form>
                 </div>
             </div>
-            <div class="section">
+            <div id="section_contact" class="section">
                 <div class="container_small">
                     <h2 class="text-center">contact</h2> 
                     <div class="row contact">
