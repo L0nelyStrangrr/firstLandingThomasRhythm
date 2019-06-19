@@ -1434,9 +1434,23 @@ textarea.form_input {
 
 /* footer */
 .footer {
+    position: relative;
     background-color: #f8f8f8;
     padding-top: 140px;
     padding-bottom: 60px;
+}
+
+.triangle-scroll {
+    opacity: 0.2;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 20px 20px;
+    border-color: transparent transparent #000 transparent;
+    z-index: 3;
 }
 
 .footer_container {
@@ -1445,6 +1459,7 @@ textarea.form_input {
     margin: 0 auto;
     padding: 0 10px;
 }
+
 
 .footer_logo {
     margin: 0 auto;
