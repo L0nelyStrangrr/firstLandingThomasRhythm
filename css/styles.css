@@ -1441,7 +1441,7 @@ textarea.form_input {
 
 .footer_container {
     max-width: 100%;
-    width: 272px;
+    width: 260px;
     margin: 0 auto;
     padding: 0 10px;
 }
@@ -1486,17 +1486,27 @@ textarea.form_input {
 }
 
 .rhombus-icon::before {
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     content: '';
     height: 23px;
     width: 23px;
     border: 1px solid;
     border-radius: 2px;
+    background-color: transparent;
     position: absolute;
     transform: rotate(-45deg);
     transform-origin: 0 0;
     top: 50%;
     left: calc(50% - 18px);
     box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+.rhombus-animation:hover:before {
+    background-color: #000; 
+}
+
+.rhombus-animation:hover i {
+    color: #f8f8f8;
 }
  
 .rhombus-icon i {
@@ -1505,7 +1515,7 @@ textarea.form_input {
     top: calc(50% - 7px);
     font-size: 14px;
     /* vertical-align: middle; */
-    font-style: bold
+    font-style: bold;
     
 }
 
