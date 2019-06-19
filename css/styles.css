@@ -148,10 +148,46 @@ a {
     height: 10px;
     position: absolute;
     left: calc(50% - 5px);
+    top: 50%;
     color: #000;
-    bottom: 4px;
+    /* bottom: 4px; */
     font-size: 15px;
     z-index: 2;
+}
+
+.floating{
+    animation-name: floating;
+    -webkit-animation-name: floating;
+ 
+    animation-duration: .7s;   
+    -webkit-animation-duration: .7s;
+ 
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+ 
+@keyframes floating {
+    0% {
+        transform: translateY(0%);  
+    }
+    50% {
+        transform: translateY(50%);  
+    }   
+    100% {
+        transform: translateY(0%);
+    }           
+}
+ 
+@-webkit-keyframes floating {
+    0% {
+        -webkit-transform: translateY(0%);  
+    }
+    50% {
+        -webkit-transform: translateY(50%);  
+    }   
+    100% {
+        -webkit-transform: translateY(0%);
+    }           
 }
 
 

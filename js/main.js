@@ -21,3 +21,14 @@ $('.testemonials_carousel').slick({
     nextArrow: '<button type="button" class="slick-next"><span><i class="fa fa-angle-right"</i></span></button>',
     dots: true
 });
+
+$(document).ready(function() {
+    $('#scroll_down').on("click", function(e) {
+        e.preventDefault();
+        var hrefId = $(this).attr('href'),
+            top = $(hrefId).offset().top;
+
+        $('body, html').animate({scrollTop: top}, 1500);    
+    });
+});
+    
