@@ -31,7 +31,7 @@ li {
     overflow: hidden;
 }
 
-.first_section {
+.home_section {
     /* height: 900px; */
     min-height: 100vh;
     width: 100%;
@@ -59,6 +59,23 @@ li {
     content: '';
     display: table;
     clear: both;
+}
+
+.headhesive {
+    /* background-color: #000; */
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+    /* transform: translateY(-100%); */
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.headhesive--stick {
+    /* transform: translateY(0); */
+    padding: 10px 0;
+    background-color: #000;
+    opacity: 0.7;
 }
 
 .logo {
