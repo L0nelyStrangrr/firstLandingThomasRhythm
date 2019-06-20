@@ -257,14 +257,22 @@ a {
 }
 
 .section_black-btn {
+    transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
     color: #111111;
-    background-color: #cfcfcf;
+    background-color: rgba(255, 255, 255, .8);
     font-size: 14px;
     font-weight: 400;
     padding: 15px 40px;
 }
 
+.section_black-btn:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+
+
 .btn {
+    cursor: pointer;
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
@@ -278,18 +286,29 @@ a {
 }
 
 .btn-default {
+    transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
     font-size: 11px;
     color: #777;
     padding: 8px 16px;
     background-color: #e5e5e5;
 }
 
+.btn-default:hover {
+    background-color: #d5d5d5;
+}
+
 .btn-black {
+    opacity: 1;
+    transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
     background-color: #323232;
     padding: 12px 20px;
     font-size: 13px;
     color:#fff;
     line-height: 14px;
+}
+
+.btn-black:hover {
+    opacity: 0.85;
 }
 
 h1,
@@ -1063,6 +1082,8 @@ you can use the generic selector below, but it's slower:
 }
 
 .slick-arrow::before {
+    transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    opacity: 1;
     content: '';
     position: absolute;
     left: 0;
@@ -1072,6 +1093,10 @@ you can use the generic selector below, but it's slower:
     border-color: transparent transparent transparent #fff;
     width: 0;
     height: 0;
+}
+
+.slick-arrow:hover::before {
+    opacity: 0.8; 
 }
 
 .slick-arrow.slick-next {
