@@ -1,3 +1,8 @@
+var options = {
+    offset: 400
+}
+var header = new Headhesive('.header', options);
+
 $(document).on('click', '.tabs_nav-link', function(e){
     e.preventDefault();
     var tabId = $(this).attr('href');
