@@ -984,7 +984,7 @@ you can use the generic selector below, but it's slower:
 /* Black small section */
 
 .section_creative {
-    padding: 70px 0 110px
+    padding: 70px 0;
 }
 
 .container_creative {
