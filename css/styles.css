@@ -44,12 +44,11 @@ li {
     background: transparent;
 }
 
-@media (max-width: 768px) {
-    .first_section {background-size: cover;
-}
-}
-
 .header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
     padding-top: 30px;
     line-height: 1;
 }
@@ -98,15 +97,29 @@ a {
     color: #ffffff;
 }
 
+.home_container {
+    display: table;
+    width: 100%;
+    height: 100%;
+    padding: 0 5px;
+}
+
+.home_content {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
 .name {
     opacity: 0.9;
     font-size: 30px;
     letter-spacing: 1.7em;
-    margin: 280px auto 100px auto;
+    /* margin: 280px auto 100px auto; */
     font-weight: 400;
     color: #fefefe;
     line-height: 1;
     margin-right: -1.7em;
+    line-height: 1.2em;
 }
 
 .slogan {
@@ -219,6 +232,10 @@ a {
     width: 20%;
 }
 
+.content-padding {
+    padding-top: 75px;
+}
+
 .section {
     padding: 130px 0;
     position: relative;
@@ -239,12 +256,15 @@ a {
     color: #fff;
 }
 
+.section_black-padding {
+    padding-bottom: 20px;
+}
+
 .section_black h2 {
     font-size: 18px;
     font-weight: 300;
     color: #fff;
     letter-spacing: 0.3em;
-    margin-bottom: 20px;
     margin-right: -0.3em;
 }
 
@@ -325,7 +345,6 @@ h2 {
     letter-spacing: 0.5em;
     line-height: 1;
     font-size: 18px;
-    margin-bottom: 75px;
     font-weight: 400;
     margin-right: -0.5em;
 }
@@ -828,8 +847,7 @@ you can use the generic selector below, but it's slower:
 
   /* Tabs */
 .tabs {
-    /* margin-left: -37px; */
-    padding-top: 45px;
+    padding-top: 55px;
 }
 
 /* #tab2 {
@@ -890,11 +908,6 @@ you can use the generic selector below, but it's slower:
 .tabs_nav-link span {
     font-size: 50px;
     margin-bottom: 30px;
-}
-
-.tabs_content {
-    padding-top: 80px;
-    /* padding-left: 40px; */
 }
 
 .tab_content:not(:first-child) {
@@ -983,10 +996,6 @@ you can use the generic selector below, but it's slower:
 
 .section_creative_content {
     position: relative;
-}
-
-.section_creative_content-title{
-    margin-bottom: 25px;
 }
 
 /* why us section */
@@ -1154,6 +1163,10 @@ you can use the generic selector below, but it's slower:
 
 .section_article-img-holder {
     margin-bottom: 30px;
+}
+
+.section_article-img img {
+    width: 100%;
 }
 
 .section_article {
@@ -1330,9 +1343,6 @@ textarea.form_input {
 }
 
 /* .contact_row */
-.contact {
-    margin-bottom: 80px;
-}
 
 .contact_row::after {
     content: '';
@@ -1442,16 +1452,12 @@ textarea.form_input {
 }
 
 .triangle-scroll {
-    opacity: 0.2;
-    position: fixed;
+    opacity: 0.15;
+    position: absolute;
     bottom: 32px;
     right: 32px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 20px 20px 20px;
-    border-color: transparent transparent #000 transparent;
-    z-index: 3;
+    font-size: 55px;
+    color: #000;
 }
 
 .footer_container {
@@ -1597,15 +1603,162 @@ textarea.form_input {
 
 /* Media queries styles */
 
+@media(max-width: 1046px) {
+
+    .employee_card-heading {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .skills_item {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 1023px)  {
+
+    h2 {
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .name {
+        font-size: 28px;
+        letter-spacing: 1.3em;
+        margin-right: -1.3em;
+    }
+
+    .slogan-tablet {
+        font-size: 15px;
+    }
+
+    .employee_card-back {
+        padding: 20px;
+    }
+
+    .col-1-tablet{
+        width: 100%;
+    }
+
+    .col_1-2-tablet {
+        width: 50%;
+    }
+
+    .content-padding  {
+        padding-top: 40px;
+    }
+    
+    .employees {
+        margin-top: 50px;
+    }
+    .employee_card-back p {
+        font-size: 12px;
+        margin-bottom: 10px;
+        color: #999;
+        line-height: 17px;
+    }
+    
+    .skills_item-title{
+        margin-bottom: 4px;
+    }
+
+    .skills_progressbar {
+        height: 10px;
+    }
+    
+    .col_wrap {
+        height: auto;
+    }
+
+    .img_holder {
+        position: relative;
+        top: 0;
+    }
+
+    .image-center {
+        margin: 0 auto;
+    }
+
+    .btn-mobile-center {
+        display: block;
+    }
+
+    .tabs {
+        padding-top: 10px;
+    }
+
+    .tabs_nav-text {
+        font-size: 13px;
+        letter-spacing: 0.1em;
+        text-indent: 0.1em;
+    }
+
+    .portfolio_tabs_nav {
+        padding: 40px 0 30px 0;
+    }
+
+    .form_input-holder textarea {
+        margin-top: 10px;
+    }
+
+    .form_col {
+        width: 100%;
+    }
+
+    .benefit-icon {
+        padding-bottom: 20px;
+    }
+
+    .benefit-text {
+        padding-top: 20px;
+    }
+
+    .slick-arrow.slick-next {
+        display: none !important;
+    }
+
+    .slick-arrow.slick-prev {
+        display: none !important;
+    }
+
+    .slick-dots {
+        margin: 0;
+        padding: 0;
+    }
+    
+}
+
 @media (max-width: 767px) {
 
     body {
         font-size: 14px;
     }
 
-    h2 {
-        margin-bottom: 0;
-        font-size: 16px;
+
+    blockquote {
+        margin: 0;
+    }
+
+    q {
+        font-size: 18px;
+    }
+
+    cite {
+        padding-top: 10px;
+    }
+
+    .name{
+        font-size: 26px;
+        letter-spacing: 0.6em;
+        margin-right: -0.6em;
+    }
+
+    .slogan {
+        font-size: 14px;
     }
 
     .section {
@@ -1614,6 +1767,10 @@ textarea.form_input {
 
     .container {
         padding: 0 10px;
+    }
+
+    .mobile-paragraph {
+        font-size: 14px;
     }
 
     .row {
@@ -1633,8 +1790,7 @@ textarea.form_input {
         width: 100%;
     }
 
-    .float-none {
-        /* width: fit-content; */
+    .float-none-mobile {
         float: none;
     }
 
@@ -1642,7 +1798,7 @@ textarea.form_input {
         margin-bottom: 30px;
     }
 
-    .col-padding-top-mobile {
+    .content-padding {
         padding-top: 30px;
     }
 
@@ -1675,10 +1831,6 @@ textarea.form_input {
         max-width: 300px;
         margin: 0 auto;
         padding-top: 25px;
-    }
-
-    .tabs_content {
-        padding-top: 0;
     }
 
     .tabs_nav-item {
@@ -1714,15 +1866,11 @@ textarea.form_input {
 
     .section_black h2 {
         font-size: 16px;
-        line-height: 22px;
+        line-height: 1.2em;
     }
 
     .digital_services {
         font-size: 14px;
-    }
-
-    .btn-mobile-center {
-        display: block;
     }
 
     .portfolio_tabs_nav {
@@ -1750,7 +1898,6 @@ textarea.form_input {
         border-bottom: 5px solid #ccc;
     }
     
-    
     .portfolio_tabs_nav-link.active {
         border-bottom-color: #888
     }
@@ -1759,29 +1906,16 @@ textarea.form_input {
         padding-bottom: 4px;
     }
 
+    .benefit-text {
+        text-align: center;
+    }
+
     .benefit_row-mobile {
         padding: 0;
     }
 
     .benefit_mobile-padding {
         padding-top: 30px;
-    }
-
-    .benefit-icon {
-        padding-bottom: 20px;
-    }
-
-    .slick-arrow.slick-next {
-        display: none !important;
-    }
-
-    .slick-arrow.slick-prev {
-        display: none !important;
-    }
-
-    .slick-dots {
-        margin: 0;
-        padding: 0;
     }
 
     .testemonials_slide q {
@@ -1821,7 +1955,7 @@ textarea.form_input {
         display: none;
     }
 
-    .contact_col-padding-top-mobile {
+    .contact_content-padding {
         padding-top: 9px;
     }
 
@@ -1852,83 +1986,5 @@ textarea.form_input {
     .form_input-mailing {
         display: block;
         
-    }
-}
-
-@media (max-width: 1023px) {
-    .mobile-paragraph {
-        font-size: 14px;
-    }
-
-    q {
-        font-size: 18px;
-    }
-
-    cite {
-        padding-top: 10px;
-    }
-
-    .employee_card-back {
-        padding: 20px;
-    }
-
-    .employee_card-back p {
-        font-size: 12px;
-        margin-bottom: 10px;
-        color: #999;
-        line-height: 17px;
-    }
-    
-    .skills_item-title{
-        margin-bottom: 4px;
-    }
-
-    .skills_progressbar {
-        height: 10px;
-    }
-    
-    .col_wrap {
-        height: auto;
-    }
-
-    .img_holder {
-        position: relative;
-        top: 0;
-    }
-
-    .image-center {
-        margin: 0 auto;
-    }
-
-    .tabs_nav-text {
-        font-size: 13px;
-        letter-spacing: 0.1em;
-        text-indent: 0.1em;
-    }
-
-    .form_input-holder textarea {
-        margin-top: 10px;
-    }
-
-    .form_col {
-        width: 100%;
-    }
-
-    .benefit-text {
-        padding-top: 20px;
-        text-align: center;
-    }
-
-}
-
-@media(max-width: 1046px) {
-
-    .employee_card-heading {
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
-
-    .skills_item {
-        margin-bottom: 10px;
     }
 }
