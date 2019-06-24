@@ -32,7 +32,7 @@ li {
 }
 
 .home_section {
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -257,6 +257,7 @@ a {
 }
 
 .section_black-btn {
+    margin: 0 auto;
     transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
     color: #111111;
     background-color: rgba(255, 255, 255, .8);
@@ -269,13 +270,14 @@ a {
     background-color: rgba(255, 255, 255, 1);
 }
 
-
+.btn_display-block {
+    display: block;
+}
 
 .btn {
     cursor: pointer;
     text-transform: uppercase;
     text-decoration: none;
-    display: inline-block;
     vertical-align: top;
     line-height: 1;
     letter-spacing: 0.2em;
@@ -286,6 +288,7 @@ a {
 }
 
 .btn-default {
+    display: inline-block;
     transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
     font-size: 11px;
     color: #777;
@@ -943,9 +946,9 @@ you can use the generic selector below, but it's slower:
 
 .portfolio_tabs_nav-text {
     font-family: 'Dosis', 'Open Sans', Arial, sans-serif;
-    letter-spacing: 0.4em;
+    letter-spacing: 0.1em;
     font-size: 13px;
-    text-indent: 0.4em;
+    text-indent: 0.1em;
     text-transform: uppercase;
 }
 
@@ -968,7 +971,6 @@ you can use the generic selector below, but it's slower:
 /* Black small section */
 
 .section_creative {
-    height: 220px;
     padding: 70px 0 110px
 }
 
@@ -987,19 +989,13 @@ you can use the generic selector below, but it's slower:
     margin-bottom: 25px;
 }
 
-.section_creative_content-btn {
-    position: absolute;
-    margin: auto;
-    right: calc(50% - 105px)
-}
-
 /* why us section */
 
 .benefit {
     margin-bottom: 0;
 }
 
-.benefit-row {
+.benefit_row {
    padding-top: 90px; 
 }
 
@@ -1260,8 +1256,9 @@ input,textarea::placeholder {
 
 .form_input-mailing {
     background-color: #fff;
-    width: 290px;
-    margin-right: 2px;
+    max-width: 290px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .mailing_form_input-holder {
@@ -1270,7 +1267,7 @@ input,textarea::placeholder {
 }
 
 .form_input:focus {
-    border-color: turquoise;
+    border-color: #696969;
 } 
 
 .form_input-holder {
@@ -1357,8 +1354,7 @@ textarea.form_input {
 
 .contact-content {
     font-family: 'Open Sans', 'Dosis', Arial, sans-serif;
-    font-weight: light;
-    font-size: 15px;
+    font-weight: 300;
     color: #444444;
 }
 
@@ -1442,8 +1438,7 @@ textarea.form_input {
 .footer {
     position: relative;
     background-color: #f8f8f8;
-    padding-top: 140px;
-    padding-bottom: 60px;
+    padding: 140px 0 60px 0;
 }
 
 .triangle-scroll {
@@ -1597,4 +1592,343 @@ textarea.form_input {
     font-size: 11px;
     color: #999999;
     margin: 0 auto;
+}
+
+
+/* Media queries styles */
+
+@media (max-width: 767px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    h2 {
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .row {
+        margin: 0 -10px;
+    }
+
+    .col {
+        padding: 0 10px;
+    }
+
+    .col-1-mobile{
+        width: 100%;
+    }
+    
+    .employee-col {
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .float-none {
+        /* width: fit-content; */
+        float: none;
+    }
+
+    .col-margin-bottom-mobile {
+        margin-bottom: 30px;
+    }
+
+    .col-padding-top-mobile {
+        padding-top: 30px;
+    }
+
+    .col-center {
+        margin: 0 auto;
+    }
+
+    .col-padding {
+        padding-top: 20px;
+    }
+
+    .employees {
+        margin-top: 30px;
+    }
+
+    .employee_name {
+        padding: 20px 0 10px;
+        font-size: 14px;
+    }
+
+    .employee_position {
+        font-size: 11px;
+    }
+
+    .tabs {
+        padding-top: 0;
+    }
+
+    .tabs_nav {
+        max-width: 300px;
+        margin: 0 auto;
+        padding-top: 25px;
+    }
+
+    .tabs_content {
+        padding-top: 0;
+    }
+
+    .tabs_nav-item {
+        padding: 0;
+        float: none;
+        width: 100%;
+    }
+
+    .tabs_nav-item .active {
+        opacity: 1;
+        border-bottom: 5px solid rgba(255, 255, 255, 1);
+    }
+
+    .tabs_nav-link {
+        display: block;
+        padding: 5px 15px;
+        text-align: center;
+        background-color: rgba(109, 104, 104, .5);
+        border-bottom: 5px solid #ccc;
+    }
+
+    .tabs_nav-link.active {
+        border-bottom-color: #888
+    }
+
+    .tabs_nav-link span {
+        display: none;
+    }
+
+    .tabs_nav-text {
+        display: inline;
+    }
+
+    .section_black h2 {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .digital_services {
+        font-size: 14px;
+    }
+
+    .btn-mobile-center {
+        display: block;
+    }
+
+    .portfolio_tabs_nav {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 300px;
+        padding: 30px 0; 
+    }
+    
+    .portfolio_tabs_nav-item {
+        display: block;
+        padding: 0;
+        margin-right: 0;
+    }
+
+    .portfolio_tabs_nav-item .active {
+        opacity: 1;
+        border-bottom: 5px solid rgba(255, 255, 255, 1);
+    }
+    
+    .portfolio_tabs_nav-link {
+        padding: 5px 15px;
+        text-align: center;
+        background-color: rgba(109, 104, 104, .5);
+        border-bottom: 5px solid #ccc;
+    }
+    
+    
+    .portfolio_tabs_nav-link.active {
+        border-bottom-color: #888
+    }
+
+    .section_portfolio-padding {
+        padding-bottom: 4px;
+    }
+
+    .benefit_row-mobile {
+        padding: 0;
+    }
+
+    .benefit_mobile-padding {
+        padding-top: 30px;
+    }
+
+    .benefit-icon {
+        padding-bottom: 20px;
+    }
+
+    .slick-arrow.slick-next {
+        display: none !important;
+    }
+
+    .slick-arrow.slick-prev {
+        display: none !important;
+    }
+
+    .slick-dots {
+        margin: 0;
+        padding: 0;
+    }
+
+    .testemonials_slide q {
+        font-size: 15px;
+    }
+
+    .testemonials_slide cite {
+        font-size: 10px;
+    }
+
+    .blog_link {
+        font-size: 10px;
+    }
+
+    .section_article-header {
+        margin-bottom: 18px;
+    }
+
+    .container_mailing .btn {
+        display: block;
+        margin: 15px auto 0 auto;
+    }
+
+    .section_mailing {
+        padding: 40px 0;
+    }
+
+    .section_mailing h2 {
+        line-height: 22px;
+    }
+
+    .container_small h2 {
+        margin-bottom: 30px;
+    }
+
+    .contact-title {
+        display: none;
+    }
+
+    .contact_col-padding-top-mobile {
+        padding-top: 9px;
+    }
+
+    .contact_row {
+        padding-bottom: 10px;
+    }
+
+    .section_form {
+        padding-top: 20px;
+    }
+
+    .map_mask-icon {
+        margin: 0;
+    }
+
+    .map_mask-text {
+        display: none;
+    }
+
+    .footer {
+        padding: 70px 0 30px 0;
+    }
+
+    .social_networks {
+        padding-bottom: 70px;
+    }
+
+    .form_input-mailing {
+        display: block;
+        
+    }
+}
+
+@media (max-width: 1023px) {
+    .mobile-paragraph {
+        font-size: 14px;
+    }
+
+    q {
+        font-size: 18px;
+    }
+
+    cite {
+        padding-top: 10px;
+    }
+
+    .employee_card-back {
+        padding: 20px;
+    }
+
+    .employee_card-back p {
+        font-size: 12px;
+        margin-bottom: 10px;
+        color: #999;
+        line-height: 17px;
+    }
+    
+    .skills_item-title{
+        margin-bottom: 4px;
+    }
+
+    .skills_progressbar {
+        height: 10px;
+    }
+    
+    .col_wrap {
+        height: auto;
+    }
+
+    .img_holder {
+        position: relative;
+        top: 0;
+    }
+
+    .image-center {
+        margin: 0 auto;
+    }
+
+    .tabs_nav-text {
+        font-size: 13px;
+        letter-spacing: 0.1em;
+        text-indent: 0.1em;
+    }
+
+    .form_input-holder textarea {
+        margin-top: 10px;
+    }
+
+    .form_col {
+        width: 100%;
+    }
+
+    .benefit-text {
+        padding-top: 20px;
+        text-align: center;
+    }
+
+}
+
+@media(max-width: 1046px) {
+
+    .employee_card-heading {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .skills_item {
+        margin-bottom: 10px;
+    }
 }
