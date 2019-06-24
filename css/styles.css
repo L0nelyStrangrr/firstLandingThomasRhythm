@@ -1729,6 +1729,14 @@ textarea.form_input {
         margin: 0;
         padding: 0;
     }
+
+    .footer {
+        padding: 70px 0 30px 0;
+    }
+
+    .social_networks {
+        padding-bottom: 70px;
+    }
     
 }
 
@@ -1973,14 +1981,6 @@ textarea.form_input {
 
     .map_mask-text {
         display: none;
-    }
-
-    .footer {
-        padding: 70px 0 30px 0;
-    }
-
-    .social_networks {
-        padding-bottom: 70px;
     }
 
     .form_input-mailing {
