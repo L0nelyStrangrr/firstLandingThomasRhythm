@@ -409,7 +409,10 @@ cite {
 .employee_card-front, 
 .employee_card-back {
     transition: transform .7s;
-    
+    -webkit-perspective: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
+    visibility:visible;
     backface-visibility: hidden;
 }
 
