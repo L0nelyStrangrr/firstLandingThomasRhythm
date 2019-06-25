@@ -51,15 +51,6 @@ li {
     left: 0;
 }
 
-/* .header::after {
-    content: '';
-    display: table;
-    clear: both;
-} */
-
-.header_wrap {
-}
-
 .header_wrap::after {
     content: '';
     display: table;
@@ -1848,6 +1839,10 @@ textarea.form_input {
     .nav_toggle.active::after {
         transform: rotate(-45deg);
         top: 13px
+    }
+
+    .headhesive--stick .logo {
+        padding: 3px 0 0;
     }
 
     .header_nav {
