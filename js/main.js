@@ -1,7 +1,12 @@
-// var options = {
-//     offset: 400
-// }
-// var header = new Headhesive('.header', options);
+var options = {
+    offset: 400
+}
+var header = new Headhesive('.header', options);
+
+$(document).on('click', '.nav_toggle', function() {
+    $(this).toggleClass('active');
+    $(this).next('.header_nav').slideToggle(400);
+});
 
 $(document).on('click', '.tabs_nav-link', function(e){
     e.preventDefault();

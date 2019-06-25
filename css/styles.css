@@ -35,7 +35,7 @@ li {
     height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 900px;
     background-position: 50% 50%;
     position: relative;
 }
@@ -49,11 +49,18 @@ li {
     top: 0;
     right: 0;
     left: 0;
-    padding-top: 30px;
-    line-height: 1;
 }
 
-.header::after {
+/* .header::after {
+    content: '';
+    display: table;
+    clear: both;
+} */
+
+.header_wrap {
+}
+
+.header_wrap::after {
     content: '';
     display: table;
     clear: both;
@@ -64,31 +71,43 @@ li {
     position: fixed;
     width: 100%;
     transition: 0.5s;
-    opacity: 0;
+    opacity: 0
 }
 
 .headhesive--stick {
-    padding: 10px 0;
     background-color: #000;
-    opacity: 0.7;
+    opacity: 1;
+}
+
+.headhesive--stick .logo {
+    padding: 15px 0 0 30px ;
+}
+
+.headhesive--stick .header_nav-item {
+    padding: 15px 30px 15px 0;
 }
 
 .logo {
     float: left;
-    padding-left: 30px;
+    padding: 30px 0 0 30px;
 }
 
-.nav {
+.header_nav {
     float: right;
 }
 
-.nav_item {
-    display: inline;
+.header_nav-list {
+    padding: 0;
+    margin: 0;
+}
+
+.header_nav-item {
+    display: inline-block;
     font-size: 11px;
     opacity: 0.75;
     text-transform: uppercase;
     letter-spacing: 0.3em;
-    padding-right: 30px;
+    padding: 30px 30px 0 0;
     color: #ffffff;
 }
 
@@ -127,6 +146,10 @@ a {
     font-size: 19px;
     color: #fefefe;
     margin: 0 auto;
+}
+
+.home_content-padding {
+    padding-top: 60px;
 }
 
 .link_down {
@@ -1632,8 +1655,12 @@ textarea.form_input {
         margin-right: -1.3em;
     }
 
-    .slogan-tablet {
+    .slogan {
         font-size: 15px;
+    }
+
+    .home_content-padding {
+        padding-top: 30px;
     }
 
     .employee_card-back {
@@ -1759,10 +1786,103 @@ textarea.form_input {
         padding-top: 10px;
     }
 
+    .header {
+        z-index: 4;
+        background-color: #000;
+    }
+
+    .header_wrap {
+        padding: 10px;
+    }
+
+    .logo {
+        padding: 3px 0 0;
+    }
+
+    .nav_toggle {
+        position: relative;
+        float: right;
+        height: 28px;
+        width: 28px;
+        outline: none;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        border: none;
+    }
+
+    .nav_toggle span,
+    .nav_toggle::before,
+    .nav_toggle::after {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: #fff;
+        top: 13px;
+    }
+
+    .nav_toggle::before,
+    .nav_toggle::after {
+        content: '';
+        transition: transform .3s;
+    }
+
+    .nav_toggle::before {
+        top: 0;
+    }
+
+    .nav_toggle::after {
+        top: 26px;
+    }
+
+    .nav_toggle.active span {
+        display: none;
+    }
+
+    .nav_toggle.active::before {
+        transform: rotate(45deg);
+        top: 13px;
+    }
+
+    .nav_toggle.active::after {
+        transform: rotate(-45deg);
+        top: 13px
+    }
+
+    .header_nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #000;
+        z-index: 4;
+        display: none;
+    }
+
+    .header_nav-list {
+        padding: 10px 0;
+    }
+
+    .header_nav-item {
+        display: block;
+        padding: 5px 15px;
+        text-align: center;
+    }
+
+    .section_link {
+        color: #fff;
+        font-size: 12px;
+    }
+
     .name{
         font-size: 26px;
         letter-spacing: 0.6em;
         margin-right: -0.6em;
+    }
+
+    .home_content-padding {
+        padding: 0;
     }
 
     .slogan {
@@ -1987,4 +2107,11 @@ textarea.form_input {
         display: block;
         
     }
+
 }
+
+    @media (min-width:768px) {
+        .nav_toggle {
+            display: none;
+        }
+    }
