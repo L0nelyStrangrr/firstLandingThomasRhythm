@@ -1786,6 +1786,10 @@ textarea.form_input {
         padding: 10px;
     }
 
+    .headhesive--stick .header_nav-item {
+        padding: 5px 15px;
+    }
+
     .logo {
         padding: 3px 0 0;
     }
