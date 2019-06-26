@@ -19,11 +19,11 @@ $(document).on('click', '.tabs_nav-link', function(e){
 
 $(document).on('click', '.portfolio_tabs_nav-link', function(e){
     e.preventDefault();
-    var tabId = $(this).attr('href');
+    var portfolioTabId = $(this).attr('href');
     $(this).addClass('active');
     $(this).parent('li').siblings().find('.portfolio_tabs_nav-link').removeClass('active');
-    $(tabId).show(400);
-    $(tabId).siblings('.designs').hide(400);
+    $(portfolioTabId).show(400);
+    $(portfolioTabId).siblings('.designs').hide(400);
 });
 
 $('.testemonials_carousel').slick({

@@ -966,7 +966,8 @@ you can use the generic selector below, but it's slower:
     text-decoration: none;
 }
 
-.portfolio_tabs_nav-link:hover {
+.portfolio_tabs_nav-link:hover,
+.portfolio_tabs_nav-link.active {
     opacity: 1;
 }
 
