@@ -1,3 +1,13 @@
+var options = {
+    offset: 400
+}
+var header = new Headhesive('.header', options);
+
+$(document).on('click', '.nav_toggle', function() {
+    $(this).toggleClass('active');
+    $(this).next('.header_nav').slideToggle(400);
+});
+
 $(document).on('click', '.tabs_nav-link', function(e){
     e.preventDefault();
     var tabId = $(this).attr('href');
@@ -9,15 +19,25 @@ $(document).on('click', '.tabs_nav-link', function(e){
 
 $(document).on('click', '.portfolio_tabs_nav-link', function(e){
     e.preventDefault();
-    var tabId = $(this).attr('href');
+    var portfolioTabId = $(this).attr('href');
     $(this).addClass('active');
     $(this).parent('li').siblings().find('.portfolio_tabs_nav-link').removeClass('active');
-    $(tabId).show(400);
-    $(tabId).siblings('.designs').hide(400);
+    $(portfolioTabId).show(400);
+    $(portfolioTabId).siblings('.designs').hide(400);
 });
 
 $('.testemonials_carousel').slick({
     prevArrow: '<button type="button" class="slick-prev"><span><i class="fa fa-angle-left"</i></span></button>',
     nextArrow: '<button type="button" class="slick-next"><span><i class="fa fa-angle-right"</i></span></button>',
     dots: true
+});
+
+$(document).ready(function() {
+    $('.section_link').on("click", function(e) {
+        e.preventDefault();
+        var hrefId = $(this).attr('href'),
+            top = $(hrefId).offset().top;
+
+        $('body, html').animate({scrollTop: top}, 1200);    
+    });
 });
