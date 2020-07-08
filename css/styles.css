@@ -1215,6 +1215,7 @@ you can use the generic selector below, but it's slower:
     font: 15px 'Dosis', 'Open Sans', Arial, sans-serif;
     letter-spacing: 0.2em;
     margin-bottom: 10px;
+    margin: 0.67em 0;
 }
 
 .section_article-header {
